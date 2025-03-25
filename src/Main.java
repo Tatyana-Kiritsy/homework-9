@@ -24,16 +24,20 @@ public class Main {
                 " рублей. Максимальная сумма трат за неделю составила " + maxSum + " рублей.");
         System.out.println();
         double averageSum = (double) sum / arrayMonth.length;
-        for (int monthSum : arrayMonth) {
-            sum += monthSum;
-        }
         System.out.println(averageSum);
         System.out.println();
+
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i]);
+        int length = reverseFullName.length;
+        char temp;
+        for (int i = 0; i < length / 2; i++) {
+            temp = reverseFullName[length - i - 1];
+            reverseFullName[length - i - 1] = reverseFullName[i];
+            reverseFullName[i] = temp;
         }
+        System.out.println(reverseFullName);
 
     }
 }
+
 
